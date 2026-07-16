@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* Define our Nextel Platform System Theme Tokens using native v4 theme configuration variables */
+@theme {
+  --color-nextel-forest-dark: #020F0A;
+  --color-nextel-forest-light: #051F14;
+  --color-nextel-forest-deep: #010805;
+  --color-nextel-mint: #00FFCC;
+  --color-nextel-mint-hover: #00CCAA;
+  --color-nextel-gold: #FFD700;
+  --color-nextel-gold-hover: #E6B800;
+
+  --animate-fade-in-up: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-subtle-pulse: subtlePulse 2s infinite ease-in-out;
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(12px) scale(0.98); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes subtlePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.02); }
+  }
+}
+
+/* Custom Base Layer Configurations */
+body {
+  background-color: #020F0A;
+  color: #ffffff;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Glowing Mint Typography Effects reserved for core headers */
+.glow-mint {
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.25);
+}
+
+/* Glowing Conversion Elements for Premium Elements */
+.glow-gold {
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
+}
+
+/* Custom Glow Container Shadow Masks */
+.glow-card-mint {
+  box-shadow: 0 0 30px -5px rgba(0, 255, 204, 0.05);
+}
+
+.glow-card-gold {
+  box-shadow: 0 0 30px -5px rgba(255, 215, 0, 0.08);
+}
+
+/* Custom Clean Scrollbar for Dark Aesthetic Layouts */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020F0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #051F14;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00FFCC;
+}
+
+
