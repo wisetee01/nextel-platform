@@ -15,7 +15,7 @@ export const buildActivationMessageParam = (packageName, formattedAmount) => {
     return "";
   }
   
-  const rawTemplate = `hello velora official, ive made my payment for velora activation. Kindly activate my account. Here is my payment proof for ${packageName} (${formattedAmount}).`;
+  const rawTemplate = `hello Nextel official, ive made my payment for Nextel activation. Kindly activate my account. Here is my payment proof for ${packageName} (${formattedAmount}).`;
   
   return encodeURIComponent(rawTemplate);
 };
